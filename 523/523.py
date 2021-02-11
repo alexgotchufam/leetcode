@@ -16,18 +16,19 @@ class RangeSum:
 
 
 class Solution:
-    def checkSubarraySum(self, nums: List[int], k: int) -> bool:
-        if k == 0 or k == 1:
-            return True
-            
+    def checkSubarraySum(self, nums: List[int], k: int) -> bool:            
         rs = RangeSum(nums)
         N = len(nums)
         for size in range(2, N + 1):
             for start in range(N - size + 1):
                 end = start + size - 1
                 sub_sum = rs.take_sum(start, end)
-                if sub_sum % k == 0:
-                    return True
+                if k != 0 :
+                    if sub_sum % k == 0:
+                        return True
+                else:
+                    if sub_sum == 0:
+                        return True
         return False
 
 
