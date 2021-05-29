@@ -11,20 +11,7 @@ typedef vector<string> vs;
 #define map(ar, dr, f)                  \
     for (int i = 0; i < dr.size(); ++i) \
         dr[i] = f(ar[i]);
-#define readint(s) \
-    int s;         \
-    cin >> s;
-#define readstr(s) \
-    string s;      \
-    getline(cin >> ws, s);
-#define readints(ar, S)         \
-    auto ar = vt();             \
-    for (int i = 0; i < S; ++i) \
-    {                           \
-        int e;                  \
-        cin >> e;               \
-        ar.push_back(e);        \
-    }
+
 template <class T>
 void printarr(const vector<T> &ar)
 {
